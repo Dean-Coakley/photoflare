@@ -12,6 +12,6 @@ before_install:
   - docker run -dit --name builder ubuntu:17.10
   - docker exec builder apt-get update -qq
   - docker exec builder apt-get install -y graphicsmagick qt5-default
-  - docker cp . builder:home/build/photoflare/
+  - docker cp . builder:home/build/photoflare
 
 script: docker exec builder "bash -c ./home/build/photoflare/build.sh"
